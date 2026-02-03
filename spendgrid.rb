@@ -1,18 +1,18 @@
 class Spendgrid < Formula
   desc "Financial Projection and Cash Flow Management CLI Tool"
   homepage "https://github.com/aligundogdu/SpendGrid"
-  version "0.1.1"
+  version "0.1.3"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.1.1/spendgrid-darwin-amd64"
-    sha256 "502d33339abacd44d37aa8aadf89ecea9aa5ec6c4284d47b2a1d5b71ccf2d320"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.1.3/spendgrid-darwin-amd64"
+    sha256 "5db07d27af1515333541ca0e52355f46bcb3d88872b3ffe7386541bde1e6897b"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.1.1/spendgrid-darwin-arm64"
-    sha256 "2147812d0e4a6759499c3fafe6152b7dd915d3ba593a3d0a8f5e5e37d9e5c7b0"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.1.3/spendgrid-darwin-arm64"
+    sha256 "0844c32de21c7bc7edd90256339e3fa1c61d1cb621c65b55000a09552a2c4d95"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.1.1/spendgrid-linux-amd64"
-    sha256 "4f6f84706ecb4e1a6610ed676875607ab414e5096e0378bcf6bef937c3643107"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.1.3/spendgrid-linux-amd64"
+    sha256 "57c7a2a99d568cf52a88868dc86e61b7f68132ca8cd24ecbee7e5159c60bdfd6"
   end
 
   def install
