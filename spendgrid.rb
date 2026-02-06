@@ -1,18 +1,18 @@
 class Spendgrid < Formula
   desc "Financial Projection and Cash Flow Management CLI Tool"
   homepage "https://github.com/aligundogdu/SpendGrid"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.0/spendgrid-darwin-amd64"
-    sha256 "e7af31ded95ae897e1f0256b8c95e5fe62227bbb5a591755aeb237da4df56b46"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.1/spendgrid-darwin-amd64"
+    sha256 "1f13038a63544b27c9095afc14caef6774825bdac4096b52cb0ebec647c607e2"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.0/spendgrid-darwin-arm64"
-    sha256 "121abf0ee777c9ad18bc5f607b2d16c0cf43eb920be399447bc7b5742ed8bd04"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.1/spendgrid-darwin-arm64"
+    sha256 "c363d35965a2a37803f5f0da26f59022db675e8e1ff5b64c42d78177a4718e1e"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.0/spendgrid-linux-amd64"
-    sha256 "c4624d3e88dfd45ae224f48f611c4dc7bf84bbcc28b30574c1a6b41b3b22f7f6"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.1/spendgrid-linux-amd64"
+    sha256 "51bfb1c2589bfad5144907c430c07f5a18cb6ecb0408a6f85f9039d2562456ef"
   end
 
   def install
@@ -20,12 +20,15 @@ class Spendgrid < Formula
   end
 
   def post_install
-    ohai "SpendGrid v0.2.0 installed! Run 'spendgrid init' to get started."
+    ohai "SpendGrid v0.2.1 installed! Run 'spendgrid init' to get started."
   end
 
   def caveats
     <<~EOS
-      SpendGrid v0.2.0 has been installed!
+      SpendGrid v0.2.1 has been installed!
+      
+      What's new in v0.2.1:
+        • Fixed amount parsing for various formats (250000TL, 25.000,50, etc.)
       
       New in v0.2.0:
         • Cobra CLI framework - better command structure
