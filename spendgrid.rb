@@ -1,18 +1,18 @@
 class Spendgrid < Formula
   desc "Financial Projection and Cash Flow Management CLI Tool"
   homepage "https://github.com/aligundogdu/SpendGrid"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.1/spendgrid-darwin-amd64"
-    sha256 "1f13038a63544b27c9095afc14caef6774825bdac4096b52cb0ebec647c607e2"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.2/spendgrid-darwin-amd64"
+    sha256 "03daa1a24870e820d1e82858a6a8712295b7e4f6265d5a5801b2157c7fcaa8dc"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.1/spendgrid-darwin-arm64"
-    sha256 "c363d35965a2a37803f5f0da26f59022db675e8e1ff5b64c42d78177a4718e1e"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.2/spendgrid-darwin-arm64"
+    sha256 "8a4fd0b174e6adf2d931d5ba3638e6134febcf701eaa58b2a14565da092acf8a"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.1/spendgrid-linux-amd64"
-    sha256 "51bfb1c2589bfad5144907c430c07f5a18cb6ecb0408a6f85f9039d2562456ef"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.2/spendgrid-linux-amd64"
+    sha256 "1e440fafc6b8c3be6469e145a86828d6c1616ce459d71ccb735e5e1927895891"
   end
 
   def install
@@ -20,15 +20,16 @@ class Spendgrid < Formula
   end
 
   def post_install
-    ohai "SpendGrid v0.2.1 installed! Run 'spendgrid init' to get started."
+    ohai "SpendGrid v0.2.2 installed! Run 'spendgrid init' to get started."
   end
 
   def caveats
     <<~EOS
-      SpendGrid v0.2.1 has been installed!
+      SpendGrid v0.2.2 has been installed!
       
-      What's new in v0.2.1:
-        • Fixed amount parsing for various formats (250000TL, 25.000,50, etc.)
+      What's new in v0.2.2:
+        • Fixed amount parsing in rules add command
+        • Supports combined amount+currency format (25000TRY, 500 USD)
       
       New in v0.2.0:
         • Cobra CLI framework - better command structure
