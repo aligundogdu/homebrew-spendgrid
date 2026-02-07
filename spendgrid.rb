@@ -6,13 +6,13 @@ class Spendgrid < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-darwin-amd64"
-    sha256 "c26e5d345dacedad9f8604e956b73c38b3ba4884167d3df778e0616a3a1f8485"
+    sha256 "764ddf08b1dbdf55315f4481dd20dec26797b9dd6d68275ee2c01926ea211bae"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-darwin-arm64"
-    sha256 "02696912384ffcea0c6ae8f5c243bdb3690aa683bfe9b7f3cf41d9c9b7ca3ae8"
+    sha256 "4b9f081316a89022ad600fa60b4ce0ae9d65b13b4be0d3287254a097e83c75e8"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-linux-amd64"
-    sha256 "24e252bfbb564c8e4fd62c13332c3192531718ef94b8b074a5fc187cc04c66be"
+    sha256 "f6217a77e5de131fa8f24591809295ae81f81b25f9a82892709617f21d1e94c8"
   end
 
   def install
