@@ -1,18 +1,18 @@
 class Spendgrid < Formula
   desc "Financial Projection and Cash Flow Management CLI Tool"
   homepage "https://github.com/aligundogdu/SpendGrid"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.2/spendgrid-darwin-amd64"
-    sha256 "03daa1a24870e820d1e82858a6a8712295b7e4f6265d5a5801b2157c7fcaa8dc"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-darwin-amd64"
+    sha256 "c26e5d345dacedad9f8604e956b73c38b3ba4884167d3df778e0616a3a1f8485"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.2/spendgrid-darwin-arm64"
-    sha256 "8a4fd0b174e6adf2d931d5ba3638e6134febcf701eaa58b2a14565da092acf8a"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-darwin-arm64"
+    sha256 "02696912384ffcea0c6ae8f5c243bdb3690aa683bfe9b7f3cf41d9c9b7ca3ae8"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.2/spendgrid-linux-amd64"
-    sha256 "1e440fafc6b8c3be6469e145a86828d6c1616ce459d71ccb735e5e1927895891"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-linux-amd64"
+    sha256 "24e252bfbb564c8e4fd62c13332c3192531718ef94b8b074a5fc187cc04c66be"
   end
 
   def install
@@ -20,14 +20,21 @@ class Spendgrid < Formula
   end
 
   def post_install
-    ohai "SpendGrid v0.2.2 installed! Run 'spendgrid init' to get started."
+    ohai "SpendGrid v0.2.3 installed! Run 'spendgrid init' to get started."
   end
 
   def caveats
     <<~EOS
-      SpendGrid v0.2.2 has been installed!
+      SpendGrid v0.2.3 has been installed!
       
-      What's new in v0.2.2:
+      What's new in v0.2.3:
+        • Rule completion system - track planned vs actual with [ ] → [x]
+        • New commands: complete, uncomplete, complete-month
+        • Three-section reports: Actual, Planned, and Projection
+        • Space support in interactive inputs (descriptions, names)
+        • Comprehensive documentation (TR/EN) with 73+ examples
+      
+      New in v0.2.2:
         • Fixed amount parsing in rules add command
         • Supports combined amount+currency format (25000TRY, 500 USD)
       
