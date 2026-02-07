@@ -1,18 +1,18 @@
 class Spendgrid < Formula
   desc "Financial Projection and Cash Flow Management CLI Tool"
   homepage "https://github.com/aligundogdu/SpendGrid"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-darwin-amd64"
-    sha256 "764ddf08b1dbdf55315f4481dd20dec26797b9dd6d68275ee2c01926ea211bae"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.4/spendgrid-darwin-amd64"
+    sha256 "a4bcbea2935540a4877ccbbd19acbc1c10eb64db320c9d09557a5b5d14546a55"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-darwin-arm64"
-    sha256 "4b9f081316a89022ad600fa60b4ce0ae9d65b13b4be0d3287254a097e83c75e8"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.4/spendgrid-darwin-arm64"
+    sha256 "fab523883535879e857cef72e5f364dcc20414be0b210906c0d0967283faefe5"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.3/spendgrid-linux-amd64"
-    sha256 "f6217a77e5de131fa8f24591809295ae81f81b25f9a82892709617f21d1e94c8"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.4/spendgrid-linux-amd64"
+    sha256 "42cb87f0a0b564d9f533febc286633ed3f8816f8003348ffb4a2d0a318cd2160"
   end
 
   def install
@@ -20,12 +20,15 @@ class Spendgrid < Formula
   end
 
   def post_install
-    ohai "SpendGrid v0.2.3 installed! Run 'spendgrid init' to get started."
+    ohai "SpendGrid v0.2.4 installed! Run 'spendgrid init' to get started."
   end
 
   def caveats
     <<~EOS
-      SpendGrid v0.2.3 has been installed!
+      SpendGrid v0.2.4 has been installed!
+      
+      What's new in v0.2.4:
+        • Bug fixes and improvements
       
       What's new in v0.2.3:
         • Rule completion system - track planned vs actual with [ ] → [x]
@@ -33,18 +36,6 @@ class Spendgrid < Formula
         • Three-section reports: Actual, Planned, and Projection
         • Space support in interactive inputs (descriptions, names)
         • Comprehensive documentation (TR/EN) with 73+ examples
-      
-      New in v0.2.2:
-        • Fixed amount parsing in rules add command
-        • Supports combined amount+currency format (25000TRY, 500 USD)
-      
-      New in v0.2.0:
-        • Cobra CLI framework - better command structure
-        • Real-time autocomplete for tags and projects
-        • Interactive forms with keyboard input
-        • Colorful financial reports
-        • Automatic rule-transaction matching with #tag#
-        • Plan command for budget tracking
       
       To get started:
         spendgrid init              # Initialize your database
