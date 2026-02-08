@@ -1,17 +1,17 @@
 class Spendgrid < Formula
   desc "Financial Projection and Cash Flow Management CLI Tool"
   homepage "https://github.com/aligundogdu/SpendGrid"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.5/spendgrid-darwin-amd64"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.6/spendgrid-darwin-amd64"
     sha256 "d3b713682400157f12f40cb2330138c1ad687ab09a01e32918282028066c2d4f"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.5/spendgrid-darwin-arm64"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.6/spendgrid-darwin-arm64"
     sha256 "ddc9958e308e2992a65e621055e72434536506be3ca6f815856429a403c9b38e"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.5/spendgrid-linux-amd64"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.6/spendgrid-linux-amd64"
     sha256 "6cfd02a4ca7ecdd5e79f1923ea0ff04379348e45d8b59429e64eb9b3d07b57b6"
   end
 
@@ -20,17 +20,17 @@ class Spendgrid < Formula
   end
 
   def post_install
-    ohai "SpendGrid v0.2.5 installed! Run 'spendgrid init' to get started."
+    ohai "SpendGrid v0.2.6 installed! Run 'spendgrid init' to get started."
   end
 
   def caveats
     <<~EOS
-      SpendGrid v0.2.5 has been installed!
+      SpendGrid v0.2.6 has been installed!
       
-      What's new in v0.2.5:
+      What's new in v0.2.6:
         • Bug fixes and improvements
       
-      What's new in v0.2.4:
+      What's new in v0.2.5:
         • Bug fixes and improvements
       
       What's new in v0.2.3:
