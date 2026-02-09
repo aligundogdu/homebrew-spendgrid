@@ -1,18 +1,18 @@
 class Spendgrid < Formula
   desc "Financial Projection and Cash Flow Management CLI Tool"
   homepage "https://github.com/aligundogdu/SpendGrid"
-  version "0.2.6"
+  version "0.3.0"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.6/spendgrid-darwin-amd64"
-    sha256 "d3b713682400157f12f40cb2330138c1ad687ab09a01e32918282028066c2d4f"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.3.0/spendgrid-darwin-amd64"
+    sha256 "ad7873515050f03cbcd88dbb1cad855a0168f18fc405178dfc7df300b04eaebb"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.6/spendgrid-darwin-arm64"
-    sha256 "ddc9958e308e2992a65e621055e72434536506be3ca6f815856429a403c9b38e"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.3.0/spendgrid-darwin-arm64"
+    sha256 "1dc131f5b6c0c13c1fd07bb956522923f95558fcda79efbac3ce428c0dd3e07a"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.2.6/spendgrid-linux-amd64"
-    sha256 "6cfd02a4ca7ecdd5e79f1923ea0ff04379348e45d8b59429e64eb9b3d07b57b6"
+    url "https://github.com/aligundogdu/SpendGrid/releases/download/v0.3.0/spendgrid-linux-amd64"
+    sha256 "aa687b425372be13ec932915c8668b66832d2fca64cbb7eaa9d97c3f573e2b8e"
   end
 
   def install
@@ -20,30 +20,32 @@ class Spendgrid < Formula
   end
 
   def post_install
-    ohai "SpendGrid v0.2.6 installed! Run 'spendgrid init' to get started."
+    ohai "SpendGrid v0.3.0 installed! Run 'spendgrid init' to get started."
   end
 
   def caveats
     <<~EOS
-      SpendGrid v0.2.6 has been installed!
+      SpendGrid v0.3.0 has been installed!
+      
+      What's new in v0.3.0:
+        • Budget tags with % prefix - track annual spending budgets
+        • New command: spendgrid budget - detailed budget reports
+        • Budget integration in monthly/yearly reports
+        • Annual budget tracking with projections and warnings
+        • Centralized tag normalization system
       
       What's new in v0.2.6:
         • Bug fixes and improvements
-      
-      What's new in v0.2.5:
-        • Bug fixes and improvements
-      
-      What's new in v0.2.3:
-        • Rule completion system - track planned vs actual with [ ] → [x]
-        • New commands: complete, uncomplete, complete-month
-        • Three-section reports: Actual, Planned, and Projection
-        • Space support in interactive inputs (descriptions, names)
-        • Comprehensive documentation (TR/EN) with 73+ examples
       
       To get started:
         spendgrid init              # Initialize your database
         spendgrid --help           # Show all available commands
         spendgrid status           # Check database status
+      
+      Budget Tracking Example:
+        spendgrid rules add         # Create rule with %bes tag
+        spendgrid add "-10000 BES #bes %bes"
+        spendgrid budget %bes       # View budget status
       
       Your data will be stored in: ~/.local/share/spendgrid
       
